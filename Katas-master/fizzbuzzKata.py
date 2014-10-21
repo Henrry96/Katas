@@ -1,13 +1,10 @@
 def fizzbuzz(num):
-    if num % 3 == 0 and num % 5 == 0:
-        print("fizzbuzz")
-        return 
-    elif num % 5 == 0:
-        print("buzz")
-        return 
-    elif num % 3 == 0:
-        print("fizz")
-        return 
-    else: print(num)
-    return
+    if int(num) % 15 == 0:
+        return "fizzbuzz"
+    elif int(num) % 5 == 0:
+        return "buzz"
+    elif int(num) % 3 == 0:
+        return "fizz"
+    return str(num)
+
     raise NotImplementedError
