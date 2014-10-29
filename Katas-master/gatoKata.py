@@ -57,14 +57,15 @@ def IntentarTirada(casilla):
     elif template.find(str(casilla)) == -1:
         return "La casilla ya esta ocupada"
     else:
+        casilla = str(casilla)
         if turno % 2 == 0:
-            template = template.replace(str(casilla),"X")
+            template = template.replace((casilla),"X")
             turno += 1
             JuegoContinua()
             if Ganador == "X":
                 return "Felicidades X as ganado. weeee"
         elif turno % 2 == 1:
-            template = template.replace(str(casilla),"O")
+            template = template.replace((casilla),"O")
             turno += 1
             JuegoContinua()
             if Ganador == "O":
